@@ -1,0 +1,156 @@
+[
+    {
+      "Ids": "#PR077",
+      "date": "7/16/2024",
+      "Title": "Ultra-Capacitor for Extreme Cold Engine",
+      "problems": "to develop ultra-capacitor for cranking engine in extreme cold conditions (-500 c).",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "ultra-capacitor, crank engine, extreme cold conditions",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR078",
+      "date": "7/16/2024",
+      "Title": "Tool Tracking using BLE",
+      "problems": "tool tracking using modern technologies like ble",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "tool tracking",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR079",
+      "date": "7/16/2024",
+      "Title": "Anti-Drone System for Armored Tanks",
+      "problems": "anti-drone system for armoured vehicle - a solution to integrate with the existing platforms such as t-72, t-90 bmp & arjun tanks to detect rf transmission from enemy drones without altering.",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "drone",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR080",
+      "date": "7/16/2024",
+      "Title": "Starter Generator Tanks (1)",
+      "problems": "starter-generator for t-90 tanks",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "starter generator",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR081",
+      "date": "7/16/2024",
+      "Title": "Starter Generator Tanks (2)",
+      "problems": "starter-generator -10-1c for t-72 tanks",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "starter generator",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR082",
+      "date": "7/16/2024",
+      "Title": "Synchro Resolver Design for T-90 Tank",
+      "problems": "design and development of synchro resolver of specification “rotary conveyor 2.5bt 0.1” which is being used in hatch door position sending unit. reduction gear unit assembly of code-94, of t-90 tank.",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "synchro resolver",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR083",
+      "date": "7/16/2024",
+      "Title": "Reserve Battery 18V",
+      "problems": "to develop reserve battery 18v",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "reserve battery",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR084",
+      "date": "7/16/2024",
+      "Title": "Reserve Battery 36V",
+      "problems": "to develop a reserve battery 36v",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "reserve battery",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR085",
+      "date": "7/16/2024",
+      "Title": "Polymer Bearing for Ship Building",
+      "problems": "class approved polymer bearing for use in ship building",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "polymer bearing",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR086",
+      "date": "7/16/2024",
+      "Title": "Accelerated High Altitude Acclimatization System",
+      "problems": "development of a system for accelerated/complete acclimatization, prior to induction into high altitude, using nitrogen enriched atmosphere",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "Acclimatization",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR087",
+      "date": "7/16/2024",
+      "Title": "BP Jackets",
+      "problems": "bp jackets for aircrew",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "aircrew jackets",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR088",
+      "date": "7/16/2024",
+      "Title": "Drone Detection via 5G Networks",
+      "problems": "drone detection capability based on 5g base stations and receivers.",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "drone, 5G",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR089",
+      "date": "7/16/2024",
+      "Title": "AI knowledge Management Module",
+      "problems": "samvaad.ai ai based interactive knowledge management module",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "AI",
+      "user": "MSME",
+      "working": 0
+    },
+    {
+      "Ids": "#PR090",
+      "date": "7/16/2024",
+      "Title": "Hydraulic Dock Block",
+      "problems": "hydraulic dock block",
+      "funding": "MSME",
+      "Domain": "CSE, Software, IT",
+      "tags": "hydraulic",
+      "user": "MSME",
+      "working": 0
+    }
+]

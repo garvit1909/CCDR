@@ -1,0 +1,967 @@
+
+[
+    {
+     "ids": "#PR001",
+     "date": "7\/16\/2024",
+     "title": "Mobile Location Tracking Framework",
+     "problems": "Develop a robust framework to get real time location of mobile users with internal authentication app permissions",
+     "funding": "Ministry of Electronics and Information Technology (MeitY)",
+     "tags": "mobile development",
+     "user": "Ministry of Electronics and Information Technology (MeitY)"
+    },
+    {
+     "ids": "#PR002",
+     "date": "7\/16\/2024",
+     "title": "3D Crime Scene Capture via 5G",
+     "problems": "3D capturing ( AR \/ VR \/ XR) of crime scenes using 5G enabled devices also used for capacity building & operations",
+     "funding": "Ministry of Electronics and Information Technology (MeitY)",
+     "domain": "CSE, Software, IT",
+     "tags": "AR \/ VR \/ XR, 5G, 3D",
+     "user": "Ministry of Electronics and Information Technology (MeitY)"
+    },
+    {
+     "ids": "#PR003",
+     "date": "7\/16\/2024",
+     "title": "AI\/ML-Powered IoT Wearable Integration",
+     "problems": "App\/framework for integration of surveillance wearables gadgets using IoTs and subsequent analysis & analytics using AI \/ ML",
+     "funding": "Ministry of Electronics and Information Technology (MeitY)",
+     "domain": "CSE, Software, IT",
+     "tags": "App Development, IoT, AI, ML",
+     "user": "Ministry of Electronics and Information Technology (MeitY)"
+    },
+    {
+     "ids": "#PR004",
+     "date": "7\/16\/2024",
+     "title": "5G Data Analytics for Policing",
+     "problems": "Develop a Data analytic using 5G metadata for predictive policing, Hot spot detection, crime mapping, geo fencing",
+     "funding": "Ministry of Electronics and Information Technology (MeitY)",
+     "domain": "CSE, Software, IT",
+     "tags": "Data Analytic, 5G, mapping ",
+     "user": "Ministry of Electronics and Information Technology (MeitY)"
+    },
+    {
+     "ids": "#PR005",
+     "date": "7\/16\/2024",
+     "title": "High-Efficiency 1-4MW Heat Recovery System",
+     "problems": "Create a close loop heat recovery system with a \ncompact, high-efficiency micro-turbine with a 1MW4MW shaft power capacity utilizing a supercritical \ncycle running on high endurance waste heat \nrecovery cycle for generation of electric power. \nClose loop chemical energy storage bank.\n",
+     "funding": "iDEX (Indian Navy)",
+     "domain": "CSE, Software, IT",
+     "tags": "Thermodynamics, Power Generation",
+     "user": "iDEX (Indian Navy)"
+    },
+    {
+     "ids": "#PR006",
+     "date": "7\/16\/2024",
+     "title": "5G Drone Control & Surveillance App",
+     "problems": "APP for 5G enabled drones (control and data) for surveillance, security and safety",
+     "funding": "Ministry of Electronics and Information Technology (MeitY)",
+     "domain": "CSE, Software, IT",
+     "tags": "App development, drone",
+     "user": "Ministry of Electronics and Information Technology (MeitY)"
+    },
+    {
+     "ids": "#PR007",
+     "date": "7\/16\/2024",
+     "title": "Ramjet Engine for Fixed-Wing Aircraft",
+     "problems": "Development of Ramjet Engine for fixed wing flying objects",
+     "funding": "iDex (Indian Navy)",
+     "domain": "CSE, Software, IT",
+     "tags": "Aviation",
+     "user": "iDex (Indian Navy)"
+    },
+    {
+     "ids": "#PR008",
+     "date": "7\/16\/2024",
+     "title": "AI App for LEA Investigation Aid",
+     "problems": "Develop an App (A.I. \/ M.L. based) to give assistance to LEAs in investigation, evidence collection, drafting of charge sheets ",
+     "funding": "Ministry of Electronics and Information Technology (MeitY)",
+     "domain": "CSE, Software, IT",
+     "tags": "App development, AI, ML",
+     "user": "Ministry of Electronics and Information Technology (MeitY)"
+    },
+    {
+     "ids": "#PR009",
+     "date": "7\/16\/2024",
+     "title": "High-res Elevation Model via SAR",
+     "problems": "Indigenous Development of High-resolution\nElevation model & ground control points using \nspace-based SAR\n",
+     "funding": "iDEX (Army)",
+     "domain": "CSE, Software, IT",
+     "tags": "SAR, Geo Spatial Capacity Development",
+     "user": "iDEX (Army)"
+    },
+    {
+     "ids": "#PR010",
+     "date": "7\/16\/2024",
+     "title": "Engaging PIB App for Direct Outreach",
+     "problems": "A mobile app for PIB with engaging features for direct outreach to the people.",
+     "funding": "Policy Planning Cell, Ministry of Information & Broadcasting",
+     "domain": "CSE, Software, IT",
+     "tags": "Smart Automation, mobile dev",
+     "user": "Policy Planning Cell, Ministry of Information & Broadcasting"
+    },
+    {
+     "ids": "#PR011",
+     "date": "7\/16\/2024",
+     "title": "Homestay Ecosystem Standards Initiative",
+     "problems": "Promoting and regulating homestay ecosystems for maintaining general standard throughout the country.",
+     "funding": "Ministry of Tourism",
+     "domain": "CSE, Software, IT",
+     "user": "Ministry of Tourism"
+    },
+    {
+     "ids": "#PR012",
+     "date": "7\/16\/2024",
+     "title": "Arbitrator & Mediation Orders DB",
+     "problems": "Single Database on Orders of arbitrator & mediation",
+     "funding": "Ministry of Finance",
+     "domain": "CSE, Software, IT",
+     "user": "Ministry of Finance"
+    },
+    {
+     "ids": "#PR013",
+     "date": "7\/16\/2024",
+     "title": "Speed Reading via Mindfulness Meditation",
+     "problems": "Develop a system to enable Speed reading based on Mindfulness meditation",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR014",
+     "date": "7\/16\/2024",
+     "title": "Streamlined Bank Financing for SCs\/OBCs",
+     "problems": "Simplifying the process of financing por SCs and OBCs through banks without transferring additional burden to government.",
+     "funding": "Ministry of Social Justice and Empowerment",
+     "domain": "CSE, Software, IT",
+     "tags": "Smart Education",
+     "user": "Ministry of Social Justice and Empowerment"
+    },
+    {
+     "ids": "#PR015",
+     "date": "7\/16\/2024",
+     "title": "Tech Boosts Trade Efficiency",
+     "problems": "Use of technology in trade and logistics in reducing transportation and transaction costs.",
+     "funding": "Ministry of External Affairs (MEA)",
+     "domain": "CSE, Software, IT",
+     "tags": "Transportation & Logistics",
+     "user": "Ministry of External Affairs (MEA)"
+    },
+    {
+     "ids": "#PR016",
+     "date": "7\/16\/2024",
+     "title": "NAAC's Evaluation of Universities",
+     "problems": "Assessment of Higher Educational Institutes by NAAC",
+     "funding": "National Assessment and Accreditation Council (NAAC).",
+     "domain": "CSE, Software, IT",
+     "user": "National Assessment and Accreditation Council (NAAC)."
+    },
+    {
+     "ids": "#PR017",
+     "date": "7\/16\/2024",
+     "title": "Unified Portal for Education Data",
+     "problems": "Development of portal which integrates in run time the information such as recognition(AICTE\/UGC\/NMC\/Other regulators), accreditation (NAAC\/NBA) and NIRF so as to ensure availability of authentic information anytime-anywhere for anyone",
+     "funding": "University Grants Commission (UGC),",
+     "domain": "CSE, Software, IT",
+     "user": "University Grants Commission (UGC),"
+    },
+    {
+     "ids": "#PR018",
+     "date": "7\/16\/2024",
+     "title": "Complaint Resolution System",
+     "problems": "Complaint Redressal Machinery",
+     "funding": "Ministry of Labour & Employment",
+     "domain": "CSE, Software, IT",
+     "user": "Ministry of Labour & Employment"
+    },
+    {
+     "ids": "#PR019",
+     "date": "7\/16\/2024",
+     "title": "Digital Tech in Tackling NRW",
+     "problems": "Use of Digital Technology in addressing Non-Revenue Water (NRW)",
+     "funding": "National Water Mission (NWM), Ministry of Jal Shakti",
+     "domain": "CSE, Software, IT",
+     "tags": "Smart Automation",
+     "user": "National Water Mission (NWM), Ministry of Jal Shakti"
+    },
+    {
+     "ids": "#PR020",
+     "date": "7\/16\/2024",
+     "title": "5G Private Network Security Framework",
+     "problems": "Create software routing security framework for private network for 5G communication network                       ",
+     "funding": "Ministry of Electronics and Information Technology (MeitY)",
+     "domain": "CSE, Software, IT",
+     "tags": "5G",
+     "user": "Ministry of Electronics and Information Technology (MeitY)"
+    },
+    {
+     "ids": "#PR021",
+     "date": "7\/16\/2024",
+     "title": "5G-Enhanced Emergency Response App",
+     "problems": "APP for Emergency response vehicle (incl. fire dept. vehicles) embedded with 5G CPEs for critical voice \/ video \/ data communications",
+     "funding": "Ministry of Electronics and Information Technology (MeitY)",
+     "domain": "CSE, Software, IT",
+     "tags": "App Development, 5G",
+     "user": "Ministry of Electronics and Information Technology (MeitY)"
+    },
+    {
+     "ids": "#PR022",
+     "date": "7\/16\/2024",
+     "title": "Precision TGT ACQN Software",
+     "problems": "Precision TGT ACQN Software (P-TAS)",
+     "funding": "Defence Innovation Organization (DIO), Department of Defence Production",
+     "domain": "CSE, Software, IT",
+     "tags": "Defence",
+     "user": "Defence Innovation Organization (DIO), Department of Defence Production"
+    },
+    {
+     "ids": "#PR023",
+     "date": "7\/16\/2024",
+     "title": "AI Underwater Object Detection ",
+     "problems": "Advancing Under water Object Identification using Aerial Hyperspectral Imaging and AI",
+     "funding": "Defence Innovation Organization (DIO), Dept. of Defence Production",
+     "domain": "CSE, Software, IT",
+     "tags": "Underwater domain",
+     "user": "Defence Innovation Organization (DIO), Dept. of Defence Production"
+    },
+    {
+     "ids": "#PR024",
+     "date": "7\/16\/2024",
+     "title": "AI\/ML Prediction of Thunderstorms & Winds",
+     "problems": "Al\/ML based prediction of Thunderstorm and Gale\nforce wind over an airfield.\n",
+     "funding": "Defence Innovation Organization (DIO), Dept of Defence Production",
+     "domain": "CSE, Software, IT",
+     "tags": "Defence",
+     "user": "Defence Innovation Organization (DIO), Dept of Defence Production"
+    },
+    {
+     "ids": "#PR025",
+     "date": "7\/16\/2024",
+     "title": "Smartphone Security App for IAF",
+     "problems": "Development of a Smartphone Security solution\/ Application which when installed on smart phone will facilitate utilisation of smart mobile phones in IAF Esta",
+     "funding": "Defence Innovation Organization (DIO), Dept of Defence Production",
+     "domain": "CSE, Software, IT",
+     "tags": "mobile development, cyber security",
+     "user": "Defence Innovation Organization (DIO), Dept of Defence Production"
+    },
+    {
+     "ids": "#PR026",
+     "date": "7\/16\/2024",
+     "title": "Optical & Radar Sensors Integration with AI",
+     "problems": "Integration of Optical and Radar Sensors into a network with AI based Analytical Platform",
+     "funding": "Defence Space Agency",
+     "domain": "CSE, Software, IT",
+     "tags": "Space Defence",
+     "user": "Defence Space Agency"
+    },
+    {
+     "ids": "#PR027",
+     "date": "7\/16\/2024",
+     "title": "AI Detection of Deepfakes ",
+     "problems": "Detection of Deep Fake & Propaganda Videos\/ Images, Including Voice 6 & Facial Manipulations Using AI",
+     "funding": "Army Design Bureau, Indian Army",
+     "domain": "CSE, Software, IT",
+     "tags": "Cybersecurity, Defence",
+     "user": "Army Design Bureau, Indian Army"
+    },
+    {
+     "ids": "#PR028",
+     "date": "7\/16\/2024",
+     "title": "Website Defacement & App Scanner Tool",
+     "problems": "Website Defacement Detection & Mobile Application Scanner",
+     "funding": "Army Design Bureau, Indian Army",
+     "domain": "CSE, Software, IT",
+     "tags": "Cybersecurity, mobile development",
+     "user": "Army Design Bureau, Indian Army"
+    },
+    {
+     "ids": "#PR029",
+     "date": "7\/16\/2024",
+     "title": "Innovative Food Tech",
+     "problems": "Hybrid Ocnis for food technology",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Hybrid Ocnis, Food Technology",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR030",
+     "date": "7\/16\/2024",
+     "title": "Chimeric Antigen Receptor T-Cells for Cancer Targeting in Microgravity",
+     "problems": "Development and Characterization of second generation chimeric antigen receptor T-Cell tagged with riboflavin photo- Activation to specifically target adherent cancers, using patient derived HSCs Maintained under microgravity",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Chimeric Antigen, Cancer, Microgravity",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR031",
+     "date": "7\/16\/2024",
+     "title": "Phytotherapeutics for Neuroprotection",
+     "problems": "Phytotherapeutics mechanism against aflatoxin induced neurodegenerative disorders",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Phytotherapeutics, Aflatoxin, Neurodegenerative",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR032",
+     "date": "7\/16\/2024",
+     "title": "Serum Magnesium's Impact on Heat Illness",
+     "problems": "Investigating role of serum magnesium in patho-physiology of heat illness and susceptibility among Indian population",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Serum Magnesium, Heat Illness, Susceptibility",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR033",
+     "date": "7\/16\/2024",
+     "title": "Scalable Route for Prussian Blue Production",
+     "problems": "Development of a scalable route for the manufacture of Prussian blue insoluble of pharmaceutical grade an FDA approved decorporation drug",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Prussian Blue, Pharmaceutical, Decorporation",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR034",
+     "date": "7\/16\/2024",
+     "title": "Novel OSL Materials for Dosimetry",
+     "problems": "Development of new & novel radiation dosimetric OSL materials by ion implantation technique and chemical methods for improved dosimetry",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Radiation Dosimetric, OSL Materials, Ion Implantation",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR035",
+     "date": "7\/16\/2024",
+     "title": "Local Phytogenics as Feed Additives",
+     "problems": "Evaluation of locally available phytogenics as feed additives",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Phytogenics, Feed Additives",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR036",
+     "date": "7\/16\/2024",
+     "title": "Natural Hepatoprotective Churnam for Army",
+     "problems": "Design and development of natural hepato protective churnam for army personnel working in extreme conditions",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Hepato Protective, Churnam, Army",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR037",
+     "date": "7\/16\/2024",
+     "title": "Yoga and Nutraceuticals for Student Health",
+     "problems": "Stress related health problem management of college students by yoga with nutraceutical interventions",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Stress Management, Yoga, Nutraceuticals",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR038",
+     "date": "7\/16\/2024",
+     "title": "Stress: Linking Mind and Body in Study",
+     "problems": "Correlation between psychological and physiological parameters of stress among staff and students an empirical study",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Psychological, Physiological, Stress",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR039",
+     "date": "7\/16\/2024",
+     "title": "Thrombosis and Hypoxia in Soldiers",
+     "problems": "High altitude-hypoxia mediates thrombosis in soldiers: inhibition of autophagy as a strategy to combat high altitude-low oxygen induced thrombosis",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "High Altitude, Hypoxia, Thrombosis",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR040",
+     "date": "7\/16\/2024",
+     "title": "Wearable Kinesiological System for Lifting",
+     "problems": "Development of wearable kinesiological system using sensorized glove and existing motion capture system for upper limb kinematics and kinetics analysis during lifting tasks",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Kinesiological System, Sensorized Glove, Motion Capture",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR041",
+     "date": "7\/16\/2024",
+     "title": "Thermally Conductive Elastomer Composites",
+     "problems": "Development of thermally conductive elastomeric composites for liquid cooled garments to mitigate thermal stress",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Thermally Conductive, Elastomeric Composites, Liquid Cooled Garments",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR042",
+     "date": "7\/16\/2024",
+     "title": "Antibacterial Glass Microsphere Dressings",
+     "problems": "Mesoporous antibacterial bioactive glass microsphere impregnated non-woven surgical cotton gauze based haemostatic dressing for profusely bleeding military wounds",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Antibacterial, Bioactive Glass, Haemostatic Dressing",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR043",
+     "date": "7\/16\/2024",
+     "title": "Regenerative Scaffold for Deep Wound Healing",
+     "problems": "A multilayered regenerative scaffold engineered to heal deep wound by mimicking anatomical architecture of natural tissue",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Regenerative Scaffold, Deep Wound, Natural Tissue",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR044",
+     "date": "7\/16\/2024",
+     "title": "Screening Antifungals for Candida Rta Proteins",
+     "problems": "Screening for drugs against the endoplasmic reticulum stress-responsive Rta proteins of Candida albicans for antifungal therapy: implications in wound infections",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Antifungal Therapy, Rta Proteins, Wound Infections",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR045",
+     "date": "7\/16\/2024",
+     "title": "Redox Signaling & Grape Proanthocyanidins for Radioprotection",
+     "problems": "Targeting Redox-Regulated Signaling system for Radioprotection using Grape proanthocyanidins: A molecular Approach for product development",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Radioprotection, Redox-Regulated, Grape Proanthocyanidins",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR046",
+     "date": "7\/16\/2024",
+     "title": "Affinity Sensors for Radiological Detection",
+     "problems": "Design and development of affinity based sensors for the detection of radiological compounds in point of CBRN emergencies using ZnO NPs functionalized by amidoxime and mugenic acid",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Affinity Based Sensors, Radiological Compounds, CBRN Emergencies",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR047",
+     "date": "7\/16\/2024",
+     "title": "Non-Contact ECG System for Monitoring",
+     "problems": "Non-Contact electrocardiogram system for continuous monitoring of cardiac system and to evaluate the armed forces personnel performance",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Non-Contact ECG, Continuous Monitoring, Cardiac System",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR048",
+     "date": "7\/16\/2024",
+     "title": "Standard Method for Dye Identification",
+     "problems": "Development of a standard method for identification of dope dyed and exhaust dyed polyester fibers\/fabrics",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Dope Dyed, Exhaust Dyed, Polyester Fibers",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR049",
+     "date": "7\/16\/2024",
+     "title": "Silver and Gold Nanoprobes for H2S Monitoring",
+     "problems": "Development of Silver and Gold Nanoprobes for the optical and electrochemical monitoring of H2S, Cysteine and glutathione in human blood",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Silver Nanoprobes, Gold Nanoprobes, Electrochemical Monitoring",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR050",
+     "date": "7\/16\/2024",
+     "title": "Rapid Diagnostics for Combat Infections",
+     "problems": "Development of rapid point-of-care diagnostic kit for infections associated with combat war wound and sepsis in armed forces",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Rapid Diagnostic Kit, Combat Wound, Sepsis",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR051",
+     "date": "7\/16\/2024",
+     "title": "Novel Biomarkers in PAH: A Transcriptomic Study",
+     "problems": "Exploring Novel Biomarkers in Indian Pulmonary Arterial Hypertension Patients Through Transcriptomics Approach",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Novel Biomarkers, Pulmonary Arterial Hypertension, Transcriptomics",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR052",
+     "date": "7\/16\/2024",
+     "title": "AI-Driven Algorithms for Bionic Hands",
+     "problems": "Development of AI Based predictive algorithms for bionic hand action recognitions",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "AI Predictive Algorithms, Bionic Hand, Action Recognitions",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR053",
+     "date": "7\/16\/2024",
+     "title": "Nano Fabric Conditioner",
+     "problems": "Nano fabric conditioner to impart antimicrobial property to nomex or high performance fabrics",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Nano Fabric Conditioner, Antimicrobial, High Performance Fabrics",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR054",
+     "date": "7\/16\/2024",
+     "title": "Sugar-Conjugated Pyridine Oximes for AChE Reactivation",
+     "problems": "Design Synthesis and evaluation of sugar conjugated pyridine oximes as reactivators of organophosphorous nerve agent inhibited acetylcholinesterase",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Sugar Conjugated, Pyridine Oximes, Nerve Agent",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR055",
+     "date": "7\/16\/2024",
+     "title": "Calyx-Based Sensors for Warfare Detection",
+     "problems": "Development of optoelectronic biochemical sensor based on calyx systems for the rapid detection of warfare agents",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Optoelectronic Sensor, Calyx Systems, Warfare Agents",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR056",
+     "date": "7\/16\/2024",
+     "title": "Optimizing Microcapsules for Clot Control",
+     "problems": "Enhancing Hemostatic Microcapsules: Optimizing Delivery Systems to Improve Clot Formation and Effectiveness in Controlling Uncontrolled Bleeding During Trauma and Surgical Procedures for Better Patient Outcomes.",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Haemostatic, Microcapsules",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR057",
+     "date": "7\/16\/2024",
+     "title": "Probiotics Bioenergetic Health Modulation",
+     "problems": "Probiotics mediated host bioenergetic health modulation as a novel approach to the management of microbial infections",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Probiotics, Bioenergetic Health, Microbial Infections",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR058",
+     "date": "7\/16\/2024",
+     "title": "Automated Cognitive Metrics Framework",
+     "problems": "Automated Cognitive metrics classification framework to improve human machine collaboration",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Cognitive Metrics, Human Machine Collaboration",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR059",
+     "date": "7\/16\/2024",
+     "title": "Enhancing Human Performance with tDCS and AI",
+     "problems": "Human performance enhancement via tDCS in VR and performance forecasting via machine learning methods",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Human Performance, tDCS, VR, Machine Learning",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR060",
+     "date": "7\/16\/2024",
+     "title": "Pain Detection by neuromodulation",
+     "problems": "Detection and Management of Pain: Pain to Pleasure by neuromodulation",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Pain Management, Neuromodulation, Pain to Pleasure",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR061",
+     "date": "7\/16\/2024",
+     "title": "Alginate-Silver Nano-composite for Burn Healing",
+     "problems": "Development Alginate-Silver Nano-composite embedded with Adipose-Derived Stem Cells for the Healing of Deep Burn Wounds",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Alginate-Silver, Nano-composite, Deep Burn Wounds",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR062",
+     "date": "7\/16\/2024",
+     "title": "Video Intelligence for Activity Analysis",
+     "problems": "Intelligent Video Based Human Activity Analysis",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Human Activity Analysis, Video Based",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR063",
+     "date": "7\/16\/2024",
+     "title": "Advanced 3D Honeycomb Helmet Design",
+     "problems": "Design and Development of an advanced 3D woven honeycomb composite structure shell with high energy absorbent liner for air crew helmet",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "3D Woven, Honeycomb Composite, Air Crew Helmet",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR064",
+     "date": "7\/16\/2024",
+     "title": "Bio-Potential System for Mobility Aid",
+     "problems": "Productization and clinical evaluation of Bio-potential signal analysis system for mobility assistance",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Bio-potential Signal, Mobility Assistance, Clinical Evaluation",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR065",
+     "date": "7\/16\/2024",
+     "title": "Speech and Communication in Burn Patients",
+     "problems": "Assessment of speech, communication, oral motor function and its clinical determinants among the patients with Post Burn facial and neck contractures",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Speech Assessment, Oral Motor Function, Post Burn",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR066",
+     "date": "7\/16\/2024",
+     "title": "IISc-DRDO-INMAS Shockwave Research",
+     "problems": "IISc-DRDO-INMAS Collaboration to explore biomedical applications of shockwaves",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Biomedical Applications, Shockwaves",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR067",
+     "date": "7\/16\/2024",
+     "title": "RAAS Insights in COPD and Hypertension",
+     "problems": "Molecular Investigation in Renin Angiotensin Aldosterone System (RAAS) in Chronic Obstructive Pulmonary Disease (COPD) and Hypertension",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "RAAS, COPD, Hypertension",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR068",
+     "date": "7\/16\/2024",
+     "title": "Smart Biosensors for Pesticide Detection",
+     "problems": "Design and Development of smart nanomaterial-based biosensors for pesticide detection in food",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Smart Nanomaterials, Biosensors, Pesticide Detection",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR069",
+     "date": "7\/16\/2024",
+     "title": "On-Spot Food Quality Testing for Defense",
+     "problems": "Testing On-Spot Food Quality for the Defense Personnel and Combating the Counterfeiters using Simple Fluorophores",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Food Quality, Counterfeiters, Fluorophores",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR070",
+     "date": "7\/16\/2024",
+     "title": "Electrochemical Platform for Stress Detection",
+     "problems": "Hand Held Electrochemical Platform for biomedical applications with particular emphasis on stress marker detection",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Electrochemical Platform, Stress Marker, Biomedical Applications",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR071",
+     "date": "7\/16\/2024",
+     "title": "Molecular Events in Heat Stress Response",
+     "problems": "Understanding the Molecular Events Involved in Cellular Responses to Heat Stress",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Cellular Responses, Heat Stress, Molecular Events",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR072",
+     "date": "7\/16\/2024",
+     "title": "RASAR Expert Systems for Drug Screening",
+     "problems": "Development of RASAR - based Expert Systems for Ligand-Based Virtual Screening of Drug Like Substances against Various Toxicity Endpoints in a Non-animal Alternative Approach",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "RASAR, Virtual Screening, Toxicity Endpoints",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR073",
+     "date": "7\/16\/2024",
+     "title": "Clickable Ethynylestradiol PET Probes for Breast Cancer",
+     "problems": "Synthesis and Biological Evaluation of New Clickable Ethynylestradiol-Folic acid based Dual Targeting 68GA radiolabeled PET Probes for Breast Cancer Imaging",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Clickable Ethynylestradiol, Dual Targeting, Breast Cancer Imaging",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR074",
+     "date": "7\/16\/2024",
+     "title": "Reusable Macrocyclic Probes for Radioactive Ion Detection",
+     "problems": "Development of reusable macrocyclic probes for detection and separation of radioactive metal ions",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Macrocyclic Probes, Radioactive Metal Ions",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR075",
+     "date": "7\/16\/2024",
+     "title": "Key Regulators in ALS: A Bioinformatics Study",
+     "problems": "Identification of key regulators and their controlling mechanism in a combinatorial Amyotrophic Lateral Sclerosis Network: An Integrated Bioinformatics Analysis",
+     "funding": "DRDO",
+     "domain": "CSE, Software, IT",
+     "tags": "Key Regulators, ALS Network, Bioinformatics",
+     "user": "DRDO"
+    },
+    {
+     "ids": "#PR076",
+     "date": "7\/16\/2024",
+     "title": "AI-Driven Pilot Debrief System",
+     "problems": "to develop a machine learning assisted pilot debrief and assessment system",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "Machine Learning , PilotAssesment, Debreifing system",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR077",
+     "date": "7\/16\/2024",
+     "title": "Ultra-Capacitor for Extreme Cold Engine",
+     "problems": "to develop ultra-capacitor for cranking engine in extreme cold conditions (-500 c).",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "ultra-capacitor, crank engine, extreme cold conditions",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR078",
+     "date": "7\/16\/2024",
+     "title": "Tool Tracking using BLE",
+     "problems": "tool tracking using modern technologies like ble",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "tool tracking",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR079",
+     "date": "7\/16\/2024",
+     "title": "Anti-Drone System for Armored Tanks",
+     "problems": "anti-drone system for armoured vehicle - a solution to integrate with the existing platforms such as t-72, t-90 bmp & arjun tanks to detect rf transmission from enemy drones without altering.",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "drone",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR080",
+     "date": "7\/16\/2024",
+     "title": "Starter Generator Tanks (1)",
+     "problems": "starter-generator сг-18-1с for t-90 tanks",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "starter generator",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR081",
+     "date": "7\/16\/2024",
+     "title": "Starter Generator Tanks (2)",
+     "problems": "starter-generator сг-10-1c for t-72 tanks",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "starter generator",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR082",
+     "date": "7\/16\/2024",
+     "title": "Synchro Resolver Design for T-90 Tank",
+     "problems": "design and development of synchro resolver of specification “rotary conveyor 2.5bt 0.1” which is being used in hatch door position sending unit. reduction gear unit assembly of code-94, of t-90 tank.",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "synchro resolver",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR083",
+     "date": "7\/16\/2024",
+     "title": "Reserve Battery 18V",
+     "problems": "to develop reserve battery 18v",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "reserve battery",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR084",
+     "date": "7\/16\/2024",
+     "title": "Reserve Battery 18V",
+     "problems": "to develop a reserve battery 36v",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "reserve battery",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR085",
+     "date": "7\/16\/2024",
+     "title": "Synchro Resolver Design for T-90 Tank",
+     "problems": "class approved polymer bearing for use in ship building",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "polymer bearing",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR086",
+     "date": "7\/16\/2024",
+     "title": "Accelerated High Altitude Acclimatization System",
+     "problems": "development of a system for accelerated\/ complete acclimatization, prior to induction into high altitude, using nitrogen enriched atmosphere",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "Acclimatization",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR087",
+     "date": "7\/16\/2024",
+     "title": "BP Jackets",
+     "problems": "bp jackets for aircrew",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "aircrew jackets",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR088",
+     "date": "7\/16\/2024",
+     "title": "Drone Detection via 5G Networks",
+     "problems": "drone detection capability based on 5g base stations and receivers.",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "drone, 5G",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR089",
+     "date": "7\/16\/2024",
+     "title": "AI knowledge Management Module",
+     "problems": "‘samvaad.ai’ – ai based interactive knowledge management module",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "AI",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR090",
+     "date": "7\/16\/2024",
+     "title": "Hydraulic Dock Block",
+     "problems": "hydraulic dock block",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "hydraulic",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR091",
+     "date": "7\/16\/2024",
+     "title": "AI-Based Defect Prediction for Naval Machinery",
+     "problems": "forecasting of defect \/ prediction of remaining useful life using artificial intelligence for critical machinery on-board naval platforms using historic defect data and real-time system parameters.",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "AI",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR092",
+     "date": "7\/16\/2024",
+     "title": "Enhancing Power Quality Monitoring Online",
+     "problems": "Improving Online Power Quality Monitoring for Enhanced System Reliability and Efficiency using online power quality modules",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "power quality module",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR093",
+     "date": "7\/16\/2024",
+     "title": "AI-Driven Continuous Process Management",
+     "problems": "AI-Powered Continuous Business Process Management Solutions",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "AI",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR094",
+     "date": "7\/16\/2024",
+     "title": "Portable Desalination for Army Patrols",
+     "problems": "manually operated portable desalination plant for army patrols operating in island territories",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "desalination",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR095",
+     "date": "7\/16\/2024",
+     "title": "Anti-Spoofing Circuits for PNT Services",
+     "problems": "development of anti-spoofing circuits for pnt services.",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "Anti-spoofing",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR096",
+     "date": "7\/16\/2024",
+     "title": "Universal Fuze Hand Setter (UFH)",
+     "problems": "universal fuze hand setter (ufh)",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "fuse hand setter",
+     "user": "MSME"
+    },
+    {
+     "ids": "#PR097",
+     "date": "7\/16\/2024",
+     "title": "Miniaturisation of payloads",
+     "problems": "miniaturisation of payloads (ir & hyperspectral) for a small satellite upto 150 kgs",
+     "funding": "MSME",
+     "domain": "CSE, Software, IT",
+     "tags": "Miniaturization",
+     "user": "MSME"
+    }
+   ]
+   

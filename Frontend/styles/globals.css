@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.swiper-grid-jobobx {
+  width: 100%;
+  /* height: 200px; */
+}
+
+.swiper-grid-jobobx .swiper-slide {
+  /* background: #eee; */
+  height: calc((100% - 30px) / 2) !important;
+}
+
+.login-register{
+  /* border:0.1px solid rgb(225, 222, 222); */
+  padding:20px;
+  /* background-color: white; */
+}
+.pt-100{
+  background-color:#3C65F5;
+
+}
+.text-center{
+  background-color: white;
+  padding:50px;
+  border-radius: 20px;
+}
+.beautify{
+  background-color: white;
+  width: 500px;
+  border-radius: 20px;
+}
+
+.text-start{
+  background-color: white;
+}
+
+.img1{
+  z-index: 100;
+}
+.img2{
+  z-index:100;
+}
+.banner-hero{
+  background-color: #3C65F5;
+}
+
+.colorforsearch{
+  color:white;
+}
+.active{
+  color: #3C65F5;
+}
+
+.jobBig{
+  display: flex;
+  flex-wrap: wrap;
+}
