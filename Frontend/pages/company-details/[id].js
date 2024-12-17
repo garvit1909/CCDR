@@ -1,12 +1,13 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'; 
 import { useEffect, useState } from 'react';
 import Layout from '../../components/Layout/Layout';
 import MultiStepFormModal from '../../components/elements/MultiformModel';
-import firebase from 'firebase/app'; // Ensure firebase is imported
-import { getAuth } from "firebase/auth"; // Import Firebase Auth
+import firebase from 'firebase/app';
+import { getAuth } from "firebase/auth";
 import UserCard from '../../components/elements/UserCard';
-import { doc, getDoc, collection, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
+import { doc, getDoc, collection, updateDoc, arrayUnion, arrayRemove, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../../config/firebaseConfig';
+import { onSnapshot } from 'firebase/firestore';
 
 export default function CompanyDetails() {
     const router = useRouter();
@@ -15,60 +16,41 @@ export default function CompanyDetails() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [error, setError] = useState(null);
     const [activeIndex, setActiveIndex] = useState(1);
-    const [interested, setInterested] = useState(false); // Track interest status
+    const [interested, setInterested] = useState(false);
     const [users, setUsers] = useState([]); // Combined list for both students and faculty
 
-    useEffect(() => {
-        if (id) {
-            fetch(`/api/getProblem?id=${id}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.error) {
-                        setError(data.error);
-                    } else {
-                        setProblem(data);
-                        fetchUserDetails(data.newArrayField); // Fetch user details
-                        checkUserInterest(data.interested); // Check if the current user is interested
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching problem data:', error.message);
-                    setError('An error occurred while fetching data.');
-                });
-        }
-    }, [id]);
+   
+
+useEffect(() => {
+    if (id) {
+        const problemsRef = collection(db, 'problems');
+        const q = query(problemsRef, where("id", "==", id));
+        
+        const unsubscribe = onSnapshot(q, (querySnapshot) => {
+            if (!querySnapshot.empty) {
+                const updatedProblem = querySnapshot.docs[0].data();
+                setProblem(updatedProblem);
+                fetchUserDetails(updatedProblem.interestedUsers); // Fetch user details for updated list
+                checkUserInterest(updatedProblem.interestedUsers); // Check user interest on update
+            }
+        }, (error) => {
+            console.error('Error listening to problem data:', error);
+            setError('An error occurred while listening to data.');
+        });
+        
+        return () => unsubscribe();
+    }
+}, [id]);
+
 
     const fetchUserDetails = async (userIds) => {
         if (!userIds || userIds.length === 0) return;
     
         try {
-            console.log('Fetching user details for IDs:', userIds); // Log the user IDs being fetched
-    
-            const usersCollection = collection(db, 'users'); // Use 'users' collection
-            const userDocs = await Promise.all(userIds.map(userId => {
-                console.log(`Fetching document for user ID: ${userId}`); // Log each user ID being fetched
-                return getDoc(doc(usersCollection, userId));
-            }));
-    
-            console.log('Documents fetched:', userDocs); // Log the fetched documents
-    
-            const userDetails = userDocs.map(doc => {
-                if (doc.exists()) {
-                    console.log(`Document exists for user ID: ${doc.id}`, doc.data()); // Log data of existing documents
-                    return doc.data();
-                } else {
-                    console.warn(`No document found for user ID: ${doc.id}`); // Log if no document found
-                    return null;
-                }
-            }).filter(data => data !== null);
-    
-            console.log('User details:', userDetails); // Log the final user details
-    
+            const usersCollection = collection(db, 'users');
+            const userDocs = await Promise.all(userIds.map(userId => getDoc(doc(usersCollection, userId))));
+            const userDetails = userDocs.map(doc => doc.exists() ? doc.data() : null).filter(data => data !== null);
+            console.log('Fetched user details:', userDetails);
             setUsers(userDetails);
         } catch (error) {
             console.error('Error fetching user details:', error.message);
@@ -76,7 +58,7 @@ export default function CompanyDetails() {
         }
     };
 
-    const checkUserInterest = async (interested) => {
+    const checkUserInterest = async (interestedUsers) => {
         const auth = getAuth();
         const currentUser = auth.currentUser;
         const userId = currentUser ? currentUser.uid : null;
@@ -99,43 +81,55 @@ export default function CompanyDetails() {
         setActiveIndex(index);
     };
 
-    const handleInterestToggle = async () => {
+    const handleInterestToggle = async (interestedUsers) => {
         if (!problem) return;
-    
+
         const auth = getAuth();
         const currentUser = auth.currentUser;
         const userId = currentUser ? currentUser.uid : null;
-    
+
         if (!userId) {
             setError('User not authenticated.');
             return;
         }
-    
+
+        // const isInterested = interestedUsers.includes(userId);
+        // setInterested(isInterested); // Set the "interested" state for the current user
         const newInterested = !interested;
         setInterested(newInterested); // Optimistically update the UI
-    
+
         try {
+            // Fetch the document ID by querying the 'problems' collection based on the 'id' field
+            const problemsRef = collection(db, 'problems');
+            const q = query(problemsRef, where("id", "==", problem.id));
+            const querySnapshot = await getDocs(q);
+
+            if (querySnapshot.empty) {
+                throw new Error("No matching document found for the specified 'id' field.");
+            }
+
+            const problemDocRef = querySnapshot.docs[0].ref;
+
             // Update user document
             const userDocRef = doc(db, 'users', userId);
             const userDoc = await getDoc(userDocRef);
             const interestedProblems = userDoc.exists() ? userDoc.data().interested || [] : [];
-    
+
             if (newInterested) {
-                if (!interestedProblems.includes(id)) {
+                if (!interestedProblems.includes(problem.id)) {
                     await updateDoc(userDocRef, {
-                        interested: arrayUnion(id)
+                        interested: arrayUnion(problem.id)
                     });
                 }
             } else {
-                if (interestedProblems.includes(id)) {
+                if (interestedProblems.includes(problem.id)) {
                     await updateDoc(userDocRef, {
-                        interested: arrayRemove(id)
+                        interested: arrayRemove(problem.id)
                     });
                 }
             }
-    
+
             // Update problem document
-            const problemDocRef = doc(db, 'problems', id);
             if (newInterested) {
                 await updateDoc(problemDocRef, {
                     interestedUsers: arrayUnion(userId)
@@ -144,22 +138,28 @@ export default function CompanyDetails() {
                 await updateDoc(problemDocRef, {
                     interestedUsers: arrayRemove(userId)
                 });
+               
             }
-    
+             window.location.reload();
+
+
+        // // Reload the page to fetch the fresh data from the database
+        // window.location.reload();
+        
             // Fetch updated problem details
-            const response = await fetch(`/api/getProblem?id=${id}`);
+            const response = await fetch(`/api/getProblem?id=${problem.id}`);
             const result = await response.json();
             if (result.error) {
-                throw new Error(result.error); // Throw to catch block
+                throw new Error(result.error);
             }
-            setProblem(prev => ({ ...prev, ...result.updatedProblem })); // Update with actual response data
+            setProblem(prev => ({ ...prev, ...result.updatedProblem }));
         } catch (error) {
             console.error('Error updating problem data:', error.message);
             setError(error.message);
             setInterested(!newInterested); // Revert optimistic update on error
         }
     };
-    
+
     if (error) {
         return <div>Error: {error}</div>;
     }
@@ -167,6 +167,12 @@ export default function CompanyDetails() {
     if (!problem) {
         return <div>Loading...</div>;
     }
+
+
+   
+    
+    
+    
     return (
         <>
             <Layout>
@@ -229,14 +235,38 @@ export default function CompanyDetails() {
                                                 <h4>End User Applications</h4>
                                                 <p>{problem.end_user}</p>
                                             </div>
-                                            <div className={`tab-pane fade ${activeIndex === 3 && "show active"}`}>
-                                                <h4>Interested Students</h4>
+                                            <div className={`tab-pane fade ${activeIndex === 3 && "show active"}`}> 
+                                                {/* <h4>Interested Students</h4>
                                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                                                     {users.map((user, index) => (
                                                         <UserCard key={index} user={user} />
                                                     ))}
-                                                </div>
-                                            </div>
+                                                </div> */}
+                                          
+<h4>Interested Students</h4>
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px', marginBottom:"50px" }}>
+    <thead>
+        <tr>
+            <th style={{ border: '1px solid #ddd', padding: '8px', textAlign: 'left' }}>#</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', textAlign: 'left' }}>Full Name</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', textAlign: 'left' }}>Email</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', textAlign: 'left' }}>Roll Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        {users.map((user, index) => (
+            <tr key={index}>
+                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{index + 1}</td>
+                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{user.fullname || "N/A"}</td>
+                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{user.email || "N/A"}</td>
+                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{user.rollNo || "N/A"}</td>
+            </tr>
+        ))}
+    </tbody>
+</table>
+</div>
+
+
                                             <div className={`tab-pane fade ${activeIndex === 4 && "show active"}`}>
                                                 <h4>Interested Faculty</h4>
                                                 {/* Add interested faculty display logic here */}
@@ -330,17 +360,17 @@ export default function CompanyDetails() {
                                                     </div>
                                                     <div className="sidebar-text-info">
                                                         <span className="text-description">Active Users</span>
-                                                        <strong className="small-heading">{problem.newArrayField}</strong>
+                                                        {/* <strong className="small-heading">{problem.interestedUsers}</strong> */}
                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className="sidebar-list-job">
-                                            <ul className="ul-disc">
+                                            {/* <ul className="ul-disc">
                                                 {problem.keywords.filter(Boolean).map((keyword, index) => (
                                                     <li key={index}>{keyword}</li>
                                                 ))}
-                                            </ul>
+                                            </ul> */}
                                             <div className="mt-30">
                                                 <a className="btn btn-send-message" onClick={handleApplyClick}>Apply Project</a>
                                             </div>
