@@ -1,7 +1,7 @@
 ﻿import { useEffect, useState } from "react";
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import StarButton from '../components/elements/starButton';
+import StarButton from '../components/elements/StarButton';
 import CompanyDetails from "./company-details";
 
 const truncateText = (text, wordLimit) => {
