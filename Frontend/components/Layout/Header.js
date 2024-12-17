@@ -37,7 +37,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
             <div className="header-left">
               <div className="header-logo">
                 <Link legacyBehavior href="">
-                  <a className="d-flex"><img alt="jobBox" src="/assets/imgs/prorep (1).png" /></a>
+                  <a className="d-flex"><img alt="jobBox" src="/assets/imgs/ccdr-logo.png" /></a>
                 </Link>
               </div>
             </div>
