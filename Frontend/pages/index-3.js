@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import CategorySlider3 from "./../components/sliders/Category3";
@@ -6,9 +6,20 @@ import { useRouter } from "next/router";
 import { db } from "../config/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 
+const departments = [
+  { value: '0', label: 'Select Department' },
+  { value: 'Mechanical Engineering', label: 'Mechanical Engineering' },
+  { value: 'Electrical Engineering', label: 'Electrical Engineering' },
+  { value: 'Design Engineering', label: 'Design Engineering' },
+  { value: 'Engineering Physics', label: 'Engineering Physics' },
+  { value: 'Civil Engineering', label: 'Civil Engineering' },
+  { value: 'Biotech Engineering', label: 'Biotech Engineering' },
+  { value: 'Computer Science Engineering', label: 'Computer Science Engineering' }
+];
+
 export default function Index3() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedDomain, setSelectedDomain] = useState("0");
+  const [selectedDepartment, setSelectedDepartment] = useState("0");
   const [problems, setProblems] = useState([]);
   const [filteredProblems, setFilteredProblems] = useState([]);
 
@@ -42,7 +53,7 @@ export default function Index3() {
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     localStorage.setItem("searchQuery", searchQuery);
-    localStorage.setItem("selectedDomain", selectedDomain);
+    localStorage.setItem("selectedDepartment", selectedDepartment);
     router.push("/jobs-grid");
   };
 
@@ -50,21 +61,21 @@ export default function Index3() {
     setSearchQuery(event.target.value);
   };
 
-  const handleDomainChange = (event) => {
-    setSelectedDomain(event.target.value);
+  const handleDepartmentChange = (event) => {
+    setSelectedDepartment(event.target.value);
   };
 
   const handlePopularSearchClick = (searchTerm) => {
     setSearchQuery(searchTerm);
     localStorage.setItem("searchQuery", searchTerm);
-    localStorage.setItem("selectedDomain", selectedDomain);
+    localStorage.setItem("selectedDepartment", selectedDepartment);
     router.push("/jobs-grid");
   };
 
   const handleCategoryClick = (category) => {
     setSearchQuery(category);
     localStorage.setItem("searchQuery", category);
-    localStorage.setItem("selectedDomain", selectedDomain);
+    localStorage.setItem("selectedDepartment", selectedDepartment);
     router.push("/jobs-grid");
   };
 
@@ -97,18 +108,14 @@ export default function Index3() {
                     <div className="box-industry">
                       <select
                         className="form-input mr-10 select-active input-industry"
-                        value={selectedDomain}
-                        onChange={handleDomainChange}
+                        value={selectedDepartment}
+                        onChange={handleDepartmentChange}
                       >
-                        <option value="0">Select Domain</option>
-                        <option value="CSE">CSE</option>
-                        <option value="Software">Software</option>
-                        <option value="IT">IT</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Recruiting">Recruiting</option>
-                        <option value="Management">Management</option>
-                        <option value="Advertising">Advertising</option>
-                        <option value="Development">Development</option>
+                        {departments.map((dept) => (
+                          <option key={dept.value} value={dept.value}>
+                            {dept.label}
+                          </option>
+                        ))}
                       </select>
                     </div>
                     <input
@@ -207,4 +214,3 @@ export default function Index3() {
     </Layout>
   );
 }
-
