@@ -4,7 +4,7 @@ import { db, auth } from '../config/firebaseConfig'; // Ensure firebaseConfig ex
 import { collection, query, where, getDocs, doc, getDoc, documentId } from 'firebase/firestore';
 import Layout from '../components/Layout/Layout';
 import BlogSlider from '../components/sliders/Blog';
-import UnbookmarkButton from '../components/elements/UnbookButton';
+import UnbookmarkButton from '../components/elements/unbookbutton';
 import Link from 'next/link';
 
 const BookmarkPage = () => {
@@ -110,10 +110,12 @@ const BookmarkPage = () => {
                               <UnbookmarkButton problemId={problem.id} onRemove={() => handleRemoveProblem(problem.id)} />
                             </span>
                             <div className="image-box">
-                              <img src="/assets/imgs/prorep (1).png" alt="jobBox" width="100" height="40" />
+                              <img src="/assets/imgs/ccdr-logo.png" alt="jobBox" width="100" height="40" />
                             </div>
                             <div className="right-info">
+                              <Link legacyBehavior href={`/company-details/${problem.id}`}>
                               <a href="#" className="name-job">{problem.title}</a>
+                              </Link>
                               <span className="small">
                                 <i className="fas fa-globe" style={{ marginRight: '5px', fontSize: '12px' }}></i> {problem.domain}
                               </span>
@@ -130,13 +132,13 @@ const BookmarkPage = () => {
                               </span>
                             </div>
                             <p className="font-sm color-text-paragraph mt-10" style={{ height: '60px', overflow: 'hidden' }}>
-                              {truncateText(problem.statement, 100)}
+                              {truncateText(problem.statement, 300)}
                             </p>
                             <div className="card-2-bottom mt-20">
                               <div className="row">
                                 <div className="col-lg-6 col-6">
                                   <div className="d-flex">
-                                    <img className="img-rounded" src="assets/imgs/page/homepage1/user1.png" alt="jobBox" />
+                                    {/* <img className="img-rounded" src="assets/imgs/page/homepage1/user1.png" alt="jobBox" /> */}
                                     <div className="info-right-img">
                                       <span className="font-sm font-bold color-brand-1 op-70">{problem.user}</span>
                                       <span className="font-xs color-text-paragraph-2">{problem.domain}</span>
@@ -144,7 +146,9 @@ const BookmarkPage = () => {
                                   </div>
                                 </div>
                                 <div className="col-lg-6 col-6 text-end">
-                                  <a href="#" className="btn btn-apply-now">View Details</a>
+                                <Link legacyBehavior href={`/company-details/${problem.id}`}>
+                                      <a className="btn btn-apply-now" >View Details</a>
+                                    </Link>
                                 </div>
                               </div>
                             </div>
