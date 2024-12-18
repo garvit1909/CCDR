@@ -174,34 +174,24 @@ export default function Index3() {
                     Developer
                   </span>
                   <span
-                    onClick={() => handlePopularSearchClick("PHP")}
+                    onClick={() => handlePopularSearchClick("Power")}
                     style={{
                       cursor: "pointer",
                       color: "white",
                       marginRight: "5px",
                     }}
                   >
-                    PHP
+                    Power
                   </span>
                   <span
-                    onClick={() => handlePopularSearchClick("Senior")}
+                    onClick={() => handlePopularSearchClick("Sustainability")}
                     style={{
                       cursor: "pointer",
                       color: "white",
                       marginRight: "5px",
                     }}
                   >
-                    Senior
-                  </span>
-                  <span
-                    onClick={() => handlePopularSearchClick("Engineer")}
-                    style={{
-                      cursor: "pointer",
-                      color: "white",
-                      marginRight: "5px",
-                    }}
-                  >
-                    Engineer
+                    Sustainability
                   </span>
                 </div>
               </div>
