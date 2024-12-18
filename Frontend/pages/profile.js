@@ -6,6 +6,10 @@ import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import Header from '../components/Layout/Header'; // Import the Header component
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faEdit } from '@fortawesome/free-solid-svg-icons'; // Import the edit icon
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'; // Import storage functions
+import { storage } from '../config/firebaseConfig'; // Import storage configuration
+import { EmailAuthProvider, reauthenticateWithCredential, updatePassword } from 'firebase/auth';
+import Link from 'next/link';
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -78,6 +82,45 @@ const Profile = () => {
   const handlePasswordEditToggle = () => {
     setIsPasswordEditing(!isPasswordEditing);
   };
+  // const handleProfileUpdate = async () => {
+  //   if (user) {
+  //     const collection = userType === 'student' ? 'users' : 'faculty';
+  //     const docRef = doc(db, collection, user.uid);
+  
+  //     try {
+  //       // If an image has been uploaded, upload it to storage first
+  //       if (profileImage) {
+  //         const storageRef = ref(storage, `profileImages/${user.uid}`);
+  //         await uploadBytes(storageRef, profileImage); // Upload the image
+  //         const imageUrl = await getDownloadURL(storageRef); // Get the URL of the uploaded image
+  //         userData.profileImage = imageUrl; // Update the profileImage with the uploaded image URL
+  //       }
+  
+  //       // Prepare the updated data object
+  //       const updatedData = userType === 'student' ? {
+  //         fullname: userData.fullname,
+  //         rollNo: userData.rollNo,
+  //         department: userData.department,
+  //         alternateEmail: userData.alternateEmail,
+  //         profileImage: userData.profileImage,
+  //       } : {
+  //         fullname: userData.fullname,
+  //         department: userData.department,
+  //         facultyID: userData.facultyID,
+  //         phoneNumber: userData.phoneNumber,
+  //         alternateEmail: userData.alternateEmail,
+  //         profileImage: userData.profileImage,
+  //       };
+  
+  //       await updateDoc(docRef, updatedData);
+  
+  //       alert('Profile updated successfully');
+  //     } catch (error) {
+  //       alert(`Error: ${error.message}`);
+  //     }
+  //   }
+  // };
+
 
   const handleProfileUpdate = async () => {
     if (user) {
@@ -86,28 +129,20 @@ const Profile = () => {
   
       try {
         // If an image has been uploaded, upload it to storage first
-        if (selectedImage) {
+        if (profileImage) {
           const storageRef = ref(storage, `profileImages/${user.uid}`);
-          await uploadBytes(storageRef, selectedImage);
-          const imageUrl = await getDownloadURL(storageRef);
+          await uploadBytes(storageRef, profileImage); // Upload the image
+          const imageUrl = await getDownloadURL(storageRef); // Get the URL of the uploaded image
           userData.profileImage = imageUrl; // Update the profileImage with the uploaded image URL
         }
   
-        // Prepare the updated data object
-        const updatedData = userType === 'student' ? {
-          fullname: userData.fullname,
-          rollNo: userData.rollNo,
-          department: userData.department,
-          alternateEmail: userData.alternateEmail,
-          profileImage: userData.profileImage,
-        } : {
-          fullname: userData.fullname,
-          department: userData.department,
-          facultyID: userData.facultyID,
-          phoneNumber: userData.phoneNumber,
-          alternateEmail: userData.alternateEmail,
-          profileImage: userData.profileImage,
-        };
+        // Filter out undefined fields
+        const updatedData = {};
+        Object.keys(userData).forEach((key) => {
+          if (userData[key] !== undefined) {
+            updatedData[key] = userData[key];
+          }
+        });
   
         await updateDoc(docRef, updatedData);
   
@@ -118,34 +153,53 @@ const Profile = () => {
     }
   };
   
+  
 
-  const handlePasswordUpdate = async () => {
-    try {
-      if (!password || !newPassword) {
-        setError('Both password fields are required.');
-        return;
-      }
-      if (newPassword.length < 6) {
-        setError('New password should be at least 6 characters long.');
-        return;
-      }
-      // Assume some logic to verify the current password and update to the new one
 
-      setError('');
-      alert('Password updated successfully');
-      setPassword('');
-      setNewPassword('');
-      setIsPasswordEditing(false);
-    } catch (error) {
+const handlePasswordUpdate = async () => {
+  if (!password || !newPassword) {
+    setError('Both password fields are required.');
+    return;
+  }
+  if (newPassword.length < 6) {
+    setError('New password should be at least 6 characters long.');
+    return;
+  }
+
+  try {
+    // Reauthenticate the user with the current password
+    const user = auth.currentUser;
+    const credential = EmailAuthProvider.credential(user.email, password);
+    await reauthenticateWithCredential(user, credential);
+
+    // Update the password
+    await updatePassword(user, newPassword);
+
+    // Success message and reset states
+    setError('');
+    alert('Password updated successfully');
+    setPassword('');
+    setNewPassword('');
+    setIsPasswordEditing(false);
+  } catch (error) {
+    if (error.code === 'auth/wrong-password') {
+      setError('The current password is incorrect.');
+    } else if (error.code === 'auth/weak-password') {
+      setError('The new password is too weak.');
+    } else {
       setError(`Error updating password: ${error.message}`);
     }
-  };
+  }
+};
+
 
   return (
     <>
-      <Header />
+      <Header/>
       <div style={styles.container}>
         <h1 style={styles.title}>User Information</h1>
+
+        
         {user ? (
           <div style={styles.profileContainer}>
           <div style={styles.iconContainer}>
@@ -330,6 +384,31 @@ const Profile = () => {
               )}
               <div style={styles.editIcon}>
   <FontAwesomeIcon icon={faEdit} onClick={handleEditToggle} />
+  <div style={{}}>
+    <Link legacyBehavior href="/">
+      <a
+        style={{
+          display: 'inline-block',
+          textDecoration: 'none',
+          color: '#000',
+          fontSize: '16px',
+          padding: '6px 12px',
+          borderRadius: '4px',
+          transition: 'background-color 0.3s, color 0.3s',
+        }}
+        onMouseOver={(e) => {
+          // e.target.style.backgroundColor = '#007bff';
+          e.target.style.color = '#000';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.backgroundColor = 'transparent';
+          e.target.style.color = '#000';
+        }}
+      >
+        Logout
+      </a>
+    </Link>
+  </div>
 </div>
               {isPasswordEditing ? (
                 <>
@@ -380,8 +459,8 @@ const styles = {
   },
   editIcon: {
     position: 'absolute',
-    top: '240px',
-    right: '240px',
+    top: '220px',
+    right: '210px',
     cursor: 'pointer',
     color: '#007bff',
     fontSize: '20px',
@@ -462,6 +541,3 @@ const styles = {
 };
 
 export default Profile;
-
-
-  
