@@ -83,8 +83,8 @@ const BookmarkButton = ({ problemId, onRemove }) => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '20px',  // Increased size
-    height: '20px', // Increased size
+    width: '40px',  // Increased size
+    height: '40px', // Increased size
   };
 
   return (
