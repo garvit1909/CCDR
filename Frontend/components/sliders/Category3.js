@@ -6,53 +6,49 @@ SwiperCore.use([Navigation]);
 const data = [
   {
     icon: "marketing.svg",
-    title: "Marketing & Sale",
-    count: 1526,
+    title: "Mechanical",
+    count: 100,
   },
   {
     icon: "customer.svg",
-    title: "Customer Help",
-    count: 185,
+    title: "Electrical",
+    count: 100,
   },
   {
     icon: "finance.svg",
-    title: "Finance",
-    count: 168,
+    title: "Electronics",
+    count: 100,
   },
   {
     icon: "lightning.svg",
     title: "Software",
-    count: 1856,
-  },
-  {
-    icon: "human.svg",
-    title: "Human Resource",
-    count: 165,
+    count: 100,
   },
   {
     icon: "management.svg",
     title: "Management",
-    count: 965,
+    count: 100,
   },
   {
+    icon: "human.svg",
+    title: "Computer Science",
+    count: 100,
+  },
+  
+  {
     icon: "retail.svg",
-    title: "Retail & Products",
-    count: 563,
+    title: "Civil",
+    count: 100,
   },
   {
     icon: "security.svg",
-    title: "Security Analyst",
-    count: 254,
+    title: "Environmental",
+    count: 100,
   },
   {
     icon: "content.svg",
-    title: "Content Writer",
-    count: 142,
-  },
-  {
-    icon: "research.svg",
-    title: "Market Research",
-    count: 532,
+    title: "Biotech",
+    count: 100,
   },
 ];
 
