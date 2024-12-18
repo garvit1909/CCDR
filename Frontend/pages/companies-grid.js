@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { db, auth } from '../config/firebaseConfig'; // Ensure firebaseConfig exports both db and auth
 import { collection, query, where, getDocs, doc, getDoc, documentId } from 'firebase/firestore';
 import Layout from '../components/Layout/Layout';
-import BlogSlider from '../components/sliders/Blog';
-import UnbookmarkButton from '../components/elements/unbookbutton';
+// import BlogSlider from '../components/sliders/Blog';
+import UnbookmarkButton from '../components/elements/UnbookButton';
 import Link from 'next/link';
 
 const BookmarkPage = () => {
