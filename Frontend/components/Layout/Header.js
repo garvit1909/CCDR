@@ -55,15 +55,6 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                     <li>
                       <Link legacyBehavior href="/companies-grid"><a>Bookmarks</a></Link>
                     </li>
-                    <li>
-                      <Link legacyBehavior href="/active-work"><a>Active Work</a></Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/"><a>Sign in</a></Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/page-register"><a>Register</a></Link>
-                    </li>
                   </ul>
                 </nav>
                 <div className={`burger-icon burger-icon-white ${openClass && "burger-close"}`}
