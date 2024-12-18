@@ -208,12 +208,7 @@ useEffect(() => {
                                     </li>
                                     <li>
                                         <a className="btn btn-border recruitment-icon mr-15 mb-5" onClick={() => handleOnClick(3)}>
-                                            Interested Students
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="btn btn-border recruitment-icon mr-15 mb-5" onClick={() => handleOnClick(4)}>
-                                            Interested Faculty
+                                            Interested
                                         </a>
                                     </li>
                                 </ul>
@@ -372,7 +367,7 @@ useEffect(() => {
                                                 ))}
                                             </ul> */}
                                             <div className="mt-30">
-                                                <a className="btn btn-send-message" onClick={handleApplyClick}>Apply Project</a>
+                                                <a className="btn btn-send-message" onClick={handleInterestToggle}>Apply Project</a>
                                             </div>
                                         </div>
                                     </div>
