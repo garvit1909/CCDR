@@ -35,10 +35,10 @@ const BookmarkPage = () => {
 
         if (userDoc.exists()) {
           const userData = userDoc.data();
-          const problemIds = userData.bookmarked || [];
-          console.log('Bookmarked Problem IDs:', problemIds); // Verify problem IDs
+          const problemIds = userData.marked || [];
+          console.log('marked Problem IDs:', problemIds); // Verify problem IDs
           if (problemIds.length > 0) {
-            fetchBookmarkedProblems(problemIds);
+            fetchmarkedProblems(problemIds);
           }
         } else {
           console.error('User document does not exist');
@@ -117,7 +117,7 @@ const BookmarkPage = () => {
                               <a href="#" className="name-job">{problem.title}</a>
                               </Link>
                               <span className="small">
-                                <i className="fas fa-globe" style={{ marginRight: '5px', fontSize: '12px' }}></i> {problem.domain}
+                                <i className="fas fa-globe" style={{ marginRight: '5px', fontSize: '8px' }}></i> {problem.domain}
                               </span>
                             </div>
                           </div>
