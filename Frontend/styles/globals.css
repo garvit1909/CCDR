@@ -55,3 +55,28 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+
+header.header {
+  padding: 10px 0; 
+  height: 120px; 
+  line-height: 1; 
+}
+
+.header .main-header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+
+
+.header-nav ul.main-menu li a {
+  padding: 8px 12px; 
+  font-size: 14px; 
+}
+
+.header-right img {
+  height: 40px; 
+  width: 40px;
+}
