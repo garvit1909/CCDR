@@ -113,9 +113,9 @@ const BookmarkPage = () => {
                               <img src="/assets/imgs/ccdr-logo.png" alt="jobBox" width="100" height="40" />
                             </div>
                             <div className="right-info">
-                              <Link legacyBehavior href={`/company-details/${problem.id}`}>
+                              // <Link legacyBehavior href={`/company-details/${problem.id}`}>
                               <a href="#" className="name-job">{problem.title}</a>
-                              </Link>
+                              // </Link>
                               <span className="small">
                                 <i className="fas fa-globe" style={{ marginRight: '5px', fontSize: '8px' }}></i> {problem.domain}
                               </span>
