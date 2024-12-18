@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { db, auth } from '../config/firebaseConfig'; // Ensure firebaseConfig exports both db and auth
 import { collection, query, where, getDocs, doc, getDoc, documentId } from 'firebase/firestore';
 import Layout from '../components/Layout/Layout';
-// import BlogSlider from '../components/sliders/Blog';
-import UnbookmarkButton from '../components/elements/UnbookButton';
+import BlogSlider from '../components/sliders/Blog';
+import UnbookmarkButton from '../components/elements/unbookbutton';
 import Link from 'next/link';
 
 const BookmarkPage = () => {
@@ -35,10 +35,10 @@ const BookmarkPage = () => {
 
         if (userDoc.exists()) {
           const userData = userDoc.data();
-          const problemIds = userData.marked || [];
-          console.log('marked Problem IDs:', problemIds); // Verify problem IDs
+          const problemIds = userData.bookmarked || [];
+          console.log('Bookmarked Problem IDs:', problemIds); // Verify problem IDs
           if (problemIds.length > 0) {
-            fetchmarkedProblems(problemIds);
+            fetchBookmarkedProblems(problemIds);
           }
         } else {
           console.error('User document does not exist');
@@ -113,11 +113,9 @@ const BookmarkPage = () => {
                               <img src="/assets/imgs/ccdr-logo.png" alt="jobBox" width="100" height="40" />
                             </div>
                             <div className="right-info">
-                              // <Link legacyBehavior href={`/company-details/${problem.id}`}>
                               <a href="#" className="name-job">{problem.title}</a>
-                              // </Link>
                               <span className="small">
-                                <i className="fas fa-globe" style={{ marginRight: '5px', fontSize: '8px' }}></i> {problem.domain}
+                                <i className="fas fa-globe" style={{ marginRight: '5px', fontSize: '12px' }}></i> {problem.domain}
                               </span>
                             </div>
                           </div>
@@ -183,6 +181,7 @@ const BookmarkPage = () => {
 };
 
 export default BookmarkPage;
+
 
 
 
