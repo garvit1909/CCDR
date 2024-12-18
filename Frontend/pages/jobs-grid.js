@@ -190,7 +190,7 @@ export default function JobGrid() {
                                     </div>
                                   </div>
                                   <div className="col-lg-6 col-6 text-end">
-                                    <Link legacyBehavior href={`/problem-details/${problemItem.id}`}>
+                                    <Link legacyBehavior href={`/company-details/${problemItem.id}`}>
                                       <a className="btn btn-apply-now">View Details</a>
                                     </Link>
                                   </div>
